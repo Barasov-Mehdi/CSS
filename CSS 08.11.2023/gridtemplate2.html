@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 25% 1fr 25%;
+    grid-template-rows:auto;
+    grid-template-areas: 
+    "box1 box2 box2 box2 box3"
+    "box1 box5 box6 box6 box7";
+
+}
+.item1{
+    background-color: red;
+    grid-area: box1;
+}
+.item2{
+    background-color: black;
+    grid-area: box2;
+}
+.item3{
+    background-color: gold;
+    grid-area: box3;
+
+}
+.item4{
+    background-color: aqua;
+    grid-area: box4;
+
+}
+.item5{
+    background-color: grey;
+    grid-area: box5;
+
+}
+.item6{
+    background-color: green;
+    grid-area: box6;
+}
+.item7{
+    background-color: black;
+    grid-area: box7;
+}
+.item8{
+    background-color: blue;
+    grid-area: box8;
+}
+@media (max-width:567px){
+    .container{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:auto;
+    grid-template-areas: 
+    "box1"
+    "box2"
+    "box3"
+    "box5"
+    "box6"
+    "box7";
+
+}
+}
+</style>
+<body>
+    <div class="container">
+        <div class="item item1">Box 1</div>
+        <div class="item item2">Box 2</div>
+        <div class="item item3">Box 3</div>
+        <!-- <div class="item item4">Box 4</div> -->
+        <div class="item item5">Box 5</div>
+        <div class="item item6">Box 6</div>
+        <div class="item item7">Box 7</div>
+        <!-- <div class="item item8">Box 8</div>  -->
+    </div>
+   
+</body>
+</html>
