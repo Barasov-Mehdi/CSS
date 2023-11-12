@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        gap: 20px;
+        height: 50vh;
+        background-color: gold;
+        grid-template-columns: [col1-start] 100px [col2-start] 100px [col3-start] 100px
+        [col3-end];
+        grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+    }
+    .item{
+        background-color: black;
+        color: white;
+    }
+    .a{
+        grid-column: col1-start / col3-start;
+        grid-row: row1-start;
+    }
+    .b{
+        grid-column: col3-start;
+        grid-row:row1-start / row2-end;
+    }
+    .c{
+        grid-column: col1-start;
+        grid-row:row2-start;
+    }
+    .d{
+        grid-column:col2-start;
+        grid-row:row2-start;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item a">Box 1</div>
+        <div class="item b">Box 2</div>
+        <div class="item c">Box 3</div>
+        <div class="item d">Box 4</div>
+        <!--<div class="item e">Box 5</div>
+        <div class="item">Box 6</div>
+        <div class="item">Box 7</div>
+        <div class="item">Box 8</div> -->
+    </div>
+</body>
+</html>
